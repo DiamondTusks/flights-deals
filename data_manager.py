@@ -1,14 +1,12 @@
 import requests
-from pprint import pprint
 
-SHEETY_PRICES_ENDPOINT = "https://api.sheety.co/225f0ec4563dbb435c97abff230d4e64/flightDeals/prices"
+SHEETY_PRICES_ENDPOINT = ""
 
 class DataManager:
 
     def __init__(self):
         self.destination_data = {}
 
-    # Use the Sheety API to GET all the data in that sheet and print it out.
     def get_destination_data(self):
         response = requests.get(url=SHEETY_PRICES_ENDPOINT)
         data = response.json()
